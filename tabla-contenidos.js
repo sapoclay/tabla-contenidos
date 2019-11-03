@@ -32,14 +32,14 @@
 
 		});
 
-		//Ejemplo de link adicional, descomentar
+		//Ejemplo de link adicional. Aquí habrá que cambiar el enlace por el ID de los artículos relacionados de cada web
 
 		$('div.rel_posts h3').attr('id','quizasteinterese');
 		cadena +="<p><i class='fa fa-link'></i> <a href='#quizasteinterese'>Artículos relacionados</a></p>\n";
 
 		cadena = tmplwrap.replace('{contenido}',cadena);
 
-		//Finalmente insertamos la cadena antes del primer elemento
+		//Insertamos la cadena antes del primer elemento h2
 		$(cadena).insertBefore( $('.entry-content h2').first() );
 	}
 
