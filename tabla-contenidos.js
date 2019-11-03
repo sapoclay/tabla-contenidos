@@ -7,11 +7,11 @@
 		var tmpllink = "<p {clase}><i class='fa fa-caret-right'></i> <a href={link}>{texto}</a></p>\n";
 		var cadena 	= "";
 		
-		//Preparamos el segundo y tercer nivel para que tenga una clase
+		//Preparamos el segundo y tercer nivel como clases
 		$('article h2').siblings('h3').addClass('n2');
 		$('article h2').siblings('h4').addClass('n3');
 
-		//Bucle, recorremos elementos para construir la tabla
+		//El bucle. Recorremos elementos para construir la tabla
 		$('article h2, article h3, article h4').each(function(index, element){
 	
 			clase = "";
