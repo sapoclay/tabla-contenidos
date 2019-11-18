@@ -5,7 +5,7 @@
 		var botonMenu = "<p><div id='botonMO'>CONTENIDO - [<a href='javascript:mostrar();'>Mostrar</a> / <a href='javascript:cerrar();''>Ocultar</a>]</div></p>";
 		//Plantillas para la tabla. Por defecto está oculta
 		var tmplwrap = "<div id='tabla-contenido' style='display:none;'>\n<p class='titulo'>Tabla de Contenido </p>\n{contenido}</div>";
-		var tmpllink = "<p {clase}><i class='fa fa-caret-right'></i> <a href={link} class='enlaces'>{texto}</a></p>\n";
+		var tmplink = "<p {clase}><i class='fa fa-caret-right'></i> <a href={link} class='enlaces'>{texto}</a></p>\n";
 		var cadena 	= "";
 		
 		//Preparamos el segundo y tercer nivel para que tenga una clase
@@ -27,7 +27,7 @@
 			$(this).attr('id',enlace_id);
 
 			//Agregamos en una variable cadena
-			cadena += tmpllink.replace('{link}',"'#" + enlace_id + "'");
+			cadena += tmplink.replace('{link}',"'#" + enlace_id + "'");
 			cadena  = cadena.replace('{texto}',texto);
 			cadena 	= cadena.replace('{clase}',clase);
 
@@ -35,8 +35,8 @@
 
 		//Ejemplo de link adicional, descomentar
 
-		$('div.dc-social h3').attr('id','titulo-dc-social');
-		cadena +="<p><i class='fa fa-share-alt'></i> <a href='#titulo-dc-social'>Compartir</a></p>\n";
+		$('div.dc-social h3').attr('id','titulo-social');
+		cadena +="<p><i class='fa fa-share-alt'></i> <a href='#titulo-social'>Compartir</a></p>\n";
 
 
 		//artículos relacionados
